@@ -18,7 +18,7 @@ defmodule Servy.Parser do
   def parse_headers([head | tail], headers) do
     [key, value] = String.split(head, ": ")
     headers = Map.put(headers, key, value)
-    IO.puts(headers)
+    IO.inspect(headers)
     parse_headers(tail, headers)
   end
 
